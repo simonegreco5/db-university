@@ -80,6 +80,7 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - id_studente
 - id_corso
 - id_insegnante
+- nome
 - data_appello
 - esito
 - voto
