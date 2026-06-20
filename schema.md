@@ -36,21 +36,22 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - id                          PK  BIGINT
 - id_dipartimento             FK  BIGINT
 - id_corso                    FK  BIGINT
-- nome
-- descrizione
-- tipo di corso
-- crediti formativi (o cfu)
+- nome                            VARCHAR(200)
+- descrizione                     TEXT
+- tipo di corso                   VARCHAR(30)
+- crediti formativi (o cfu)       VARCHAR(30)
 
 ## Table name: Corsi
 
 - id                          PK  BIGINT
 - id_corso_di_laurea          FK  BIGINT
 - id_insegnante               FK  BIGINT
-- nome
-- descrizione
-- codice
-- cfu
-- ore
+- nome                            VARCHAR(200)
+- descrizione                     TEXT
+- codice                          VARCHAR(30)
+- cfu                             VARCHAR(30)
+- semestre                        VARCHAR(30)
+- ore                             VARCHAR(30)
 
 ## Table name: Insegnanti
 
@@ -58,21 +59,21 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - id_dipartimento             FK  BIGINT
 - id_corso                    FK  BIGINT
 - id_esame                    FK  BIGINT
-- nome
-- cognome
-- email
-- ufficio
+- nome                            VARCHAR(100)
+- cognome                         VARCHAR(100)
+- email                           VARCHAR(50)
+- ufficio                         VARCHAR(50)
 
 ## Table name: Studente
 
 - id                          PK  BIGINT
 - id_corso_di_laurea          FK  BIGINT
 - id_corso                    FK  BIGINT
-- matricola
-- nome
-- cognome
-- email
-- anno_iscrizione
+- matricola                       VARCHAR(20)
+- nome                            VARCHAR(100)
+- cognome                         VARCHAR(100)
+- email                           VARCHAR(100)
+- anno_iscrizione                 DATE
 
 ## Table name: Esame
 
@@ -80,10 +81,10 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - id_studente                 FK  BIGINT
 - id_corso                    FK  BIGINT
 - id_insegnante               FK  BIGINT
-- nome
-- data_appello
-- esito
-- voto
+- nome                            VARCHAR(100)
+- data_appello                    DATE
+- esito                           VARCHAR(50)
+- voto                            VARCHAR(30)
 
 
 
