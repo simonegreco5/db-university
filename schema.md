@@ -24,7 +24,7 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 
 ## Table name: Dipartimenti
 
-- id
+- id                          PK  BIGINT
 - nome
 - descrizione
 - sede
@@ -33,9 +33,9 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 
 ## Table name: Corso di Laurea
 
-- id 
-- id_dipartimento FK 
-- id_corso
+- id                          PK  BIGINT
+- id_dipartimento             FK  BIGINT
+- id_corso                    FK  BIGINT
 - nome
 - descrizione
 - tipo di corso
@@ -43,9 +43,9 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 
 ## Table name: Corsi
 
-- id
-- id_corso_di_laurea FK 
-- id_insegnante
+- id                          PK  BIGINT
+- id_corso_di_laurea          FK  BIGINT
+- id_insegnante               FK  BIGINT
 - nome
 - descrizione
 - codice
@@ -54,10 +54,10 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 
 ## Table name: Insegnanti
 
-- id
-- id_dipartimento
-- id_corso
-- id_esame
+- id                          PK  BIGINT
+- id_dipartimento             FK  BIGINT
+- id_corso                    FK  BIGINT
+- id_esame                    FK  BIGINT
 - nome
 - cognome
 - email
@@ -65,9 +65,9 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 
 ## Table name: Studente
 
-- id
-- id_corso_di_laurea
-- id_corso
+- id                          PK  BIGINT
+- id_corso_di_laurea          FK  BIGINT
+- id_corso                    FK  BIGINT
 - matricola
 - nome
 - cognome
@@ -76,10 +76,10 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 
 ## Table name: Esame
 
-- id
-- id_studente
-- id_corso
-- id_insegnante
+- id                          PK  BIGINT
+- id_studente                 FK  BIGINT
+- id_corso                    FK  BIGINT
+- id_insegnante               FK  BIGINT
 - nome
 - data_appello
 - esito
